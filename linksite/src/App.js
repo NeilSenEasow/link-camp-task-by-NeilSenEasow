@@ -8,14 +8,11 @@ import IEEELinked from './components/ieeelinked';
 function App() {
   return (
     <div>
-      {/* Navbar */}
       <nav className="navbar">
-        {/* Logo Section */}
         <div className="logo">
           <h1>IEEE LINK</h1>
         </div>
 
-        {/* Navigation Links */}
         <div className="nav-links">
           <a href="#home">Home</a>
           <a href="#office-bearers">Office Bearers</a>
@@ -24,7 +21,6 @@ function App() {
           <a href="#about">About Us</a>
         </div>
 
-        {/* Social Icons */}
         <div className="social-icons">
           <a href="#instagram"><i className="fab fa-instagram"></i></a>
           <a href="#linkedin"><i className="fab fa-linkedin"></i></a>
@@ -32,7 +28,6 @@ function App() {
         </div>
       </nav>
 
-      {/* Main Content */}
       <div className="main-content">
         <About />
         <Contact />
