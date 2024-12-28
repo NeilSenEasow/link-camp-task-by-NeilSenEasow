@@ -1,5 +1,9 @@
 {
-  "components": [],
+  "components": ["./src/components/about.jsx", 
+    "./src/components/contact.jsx", 
+    "./src/components/officebearers.jsx", 
+    "./src/components/resources.jsx", 
+    "./src/components/ieeelinked.jsx"],
   "projectId": "2qr9tliN2AJtVb5bIpAq9Mm4qWv",
   "projectName": "Link site"
 }
