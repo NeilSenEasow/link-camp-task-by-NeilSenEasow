@@ -2,7 +2,7 @@ import React from 'react';
 import './about.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
+//This is a test file for the about section
 function About() {
     React.useEffect(() => {
         AOS.init({
