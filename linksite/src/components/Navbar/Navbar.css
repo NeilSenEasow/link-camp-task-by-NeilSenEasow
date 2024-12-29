@@ -1,0 +1,151 @@
+.header {
+  background: rgba(42, 44, 57, 0.9);
+  padding: 15px 0;
+  transition: all 0.5s;
+  z-index: 997;
+}
+
+.header .logo {
+  line-height: 0;
+  text-decoration: none;
+}
+
+.header .logo .sitename {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 28px;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+}
+
+.navmenu {
+  padding: 0;
+}
+
+.navmenu ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navmenu li {
+  position: relative;
+  padding: 10px 20px;
+}
+
+.navmenu a,
+.navmenu a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  white-space: nowrap;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.navmenu a:hover,
+.navmenu .active,
+.navmenu .active:focus {
+  color: #fff;
+}
+
+.navmenu .social-icons {
+  margin-left: 20px;
+}
+
+.navmenu .social-icons a {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 18px;
+  padding: 0 8px;
+  transition: 0.3s;
+}
+
+.navmenu .social-icons a:hover {
+  color: #fff;
+}
+
+.mobile-nav-toggle {
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  line-height: 0;
+  transition: 0.5s;
+}
+
+@media (max-width: 1279px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .navmenu ul {
+    display: none;
+  }
+}
+
+/* Mobile Navigation */
+.mobile-nav-active {
+  overflow: hidden;
+}
+
+.mobile-nav-active .mobile-nav-toggle {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 9999;
+  color: #fff;
+}
+
+.mobile-nav-active .navmenu {
+  position: fixed;
+  overflow: hidden;
+  inset: 0;
+  background: rgba(42, 44, 57, 0.8);
+  transition: 0.3s;
+  z-index: 9998;
+}
+
+.mobile-nav-active .navmenu ul {
+  display: block;
+  position: absolute;
+  top: 55px;
+  right: 15px;
+  left: 15px;
+  padding: 10px 0;
+  border-radius: 8px;
+  background-color: #fff;
+  overflow-y: auto;
+  transition: 0.3s;
+  z-index: 9999;
+}
+
+.mobile-nav-active .navmenu ul li {
+  padding: 0;
+}
+
+.mobile-nav-active .navmenu ul a {
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #2a2c39;
+}
+
+.mobile-nav-active .navmenu ul a:hover {
+  color: #ef6603;
+}
+
+.mobile-nav-active .navmenu .social-icons {
+  margin: 15px 0;
+}
+
+.mobile-nav-active .navmenu .social-icons a {
+  color: #2a2c39;
+} 
