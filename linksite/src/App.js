@@ -5,6 +5,7 @@ import About from './components/About/about';
 import Stats from './components/Stats/stats';
 import Loading from './components/loading';
 import React, { useState, useEffect } from 'react';
+import Features from './components/Features/features';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -23,6 +24,7 @@ function App() {
           <Hero />
           <About />
           <Stats />
+          <Features />
         </>
       )}
     </div>
