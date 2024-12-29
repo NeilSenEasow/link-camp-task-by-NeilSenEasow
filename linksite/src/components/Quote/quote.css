@@ -1,7 +1,7 @@
 .quote {
     padding: 120px 0;
-    background: url('../../assets/images/quote/replace.png') center center;
     background-size: cover;
+    background-position: center;
     background-attachment: fixed;
     position: relative;
     color: #fff;
@@ -13,7 +13,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(rgba(42, 44, 57, 0.9), rgba(42, 44, 57, 0.9));
+    background: linear-gradient(rgba(42, 44, 57, 0.85), rgba(42, 44, 57, 0.85));
 }
 
 .quote-content {
@@ -50,4 +50,8 @@
 [data-aos="fade-up"].aos-animate .quote-content {
     opacity: 1;
     transform: translateY(0);
+}
+
+.quote h2 span {
+    color: #ef6603;
 } 

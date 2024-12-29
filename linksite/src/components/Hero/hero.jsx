@@ -2,19 +2,14 @@ import React, { useEffect } from 'react';
 import './hero.css';
 import 'animate.css';
 
-import slide1 from '../../assets/images/hero/welcometolink.jpeg';
-import slide2 from '../../assets/images/hero/ieeepeople.jpeg';
-import slide3 from '../../assets/images/hero/ieeepeople2.jpeg';
+import slide1 from '../../assets/images/hero/test-image-1.jpg';
+import slide2 from '../../assets/images/hero/test-image-2.jpg';
+import slide3 from '../../assets/images/hero/test-image-3.jpg';
 
 function Hero() {
     useEffect(() => {
         const myCarousel = document.getElementById('hero-carousel');
         if (myCarousel && window.bootstrap) {
-            const carousel = new window.bootstrap.Carousel(myCarousel, {
-                interval: 5000,
-                ride: 'carousel',
-                touch: true
-            });
 
             // Add animation when slide changes
             myCarousel.addEventListener('slide.bs.carousel', (e) => {
@@ -41,7 +36,7 @@ function Hero() {
                 <div className="carousel-inner">
                     {/* Slide 1 */}
                     <div className="carousel-item active" style={{
-                        backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)), url(${slide1})`,
+                        backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url(${slide1})`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center'
                     }}>
@@ -60,7 +55,7 @@ function Hero() {
 
                     {/* Slide 2 */}
                     <div className="carousel-item" style={{
-                        backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)), url(${slide2})`,
+                        backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url(${slide2})`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center'
                     }}>
@@ -79,7 +74,7 @@ function Hero() {
 
                     {/* Slide 3 */}
                     <div className="carousel-item" style={{
-                        backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)), url(${slide3})`,
+                        backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url(${slide3})`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center'
                     }}>
