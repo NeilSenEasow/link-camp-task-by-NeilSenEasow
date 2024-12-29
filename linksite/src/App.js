@@ -7,6 +7,8 @@ import Loading from './components/loading';
 import React, { useState, useEffect } from 'react';
 import Features from './components/Features/features';
 import Quote from './components/Quote/quote';
+import Societies from './components/Societies/societies';
+import Newsletter from './components/Newsletter/newsletter';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -27,6 +29,8 @@ function App() {
           <Stats />
           <Features />
           <Quote />
+          <Societies />
+          <Newsletter />
         </>
       )}
     </div>
