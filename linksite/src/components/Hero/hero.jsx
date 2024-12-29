@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import './hero.css';
+import 'animate.css';
 
 import slide1 from '../../assets/images/hero/welcometolink.jpeg';
 import slide2 from '../../assets/images/hero/ieeepeople.jpeg';
@@ -7,13 +8,29 @@ import slide3 from '../../assets/images/hero/ieeepeople2.jpeg';
 
 function Hero() {
     useEffect(() => {
-        
         const myCarousel = document.getElementById('hero-carousel');
         if (myCarousel && window.bootstrap) {
-            new window.bootstrap.Carousel(myCarousel, {
+            const carousel = new window.bootstrap.Carousel(myCarousel, {
                 interval: 5000,
                 ride: 'carousel',
                 touch: true
+            });
+
+            // Add animation when slide changes
+            myCarousel.addEventListener('slide.bs.carousel', (e) => {
+                const nextSlide = e.relatedTarget;
+                const elements = nextSlide.querySelectorAll('[class*="animate__"]');
+                
+                elements.forEach(element => {
+                    element.style.opacity = '0';
+                    setTimeout(() => {
+                        element.style.opacity = '1';
+                        // Restart animations
+                        element.classList.remove('animate__animated');
+                        void element.offsetWidth; // Trigger reflow
+                        element.classList.add('animate__animated');
+                    }, 300);
+                });
             });
         }
     }, []);
@@ -29,12 +46,17 @@ function Hero() {
                         backgroundPosition: 'center'
                     }}>
                         <div className="carousel-container">
-                            <h2 className="animate__animated animate__fadeInDown">Welcome to <span>IEEE LINK</span></h2>
-                            <p className="animate__animated animate__fadeInUp">Local Integrated Network of Kerala (LINK) is a network of IEEE Student Branches in Kerala Section. LINK was formed with the vision of improving the relationship between student branches and thereby improving their overall activity.</p>
-                            <a href="#about" className="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                            <h2 className="animate__animated animate__fadeInDown animate__delay-0.5s">
+                                Welcome to <span>IEEE LINK</span>
+                            </h2>
+                            <p className="animate__animated animate__fadeInUp animate__delay-1s">
+                                Local Integrated Network of Kerala (LINK) is a network of IEEE Student Branches in Kerala Section. LINK was formed with the vision of improving the relationship between student branches and thereby improving their overall activity.
+                            </p>
+                            <a href="#about" className="btn-get-started animate__animated animate__fadeInUp animate__delay-1.5s scrollto">
+                                Read More
+                            </a>
                         </div>
                     </div>
-                    
 
                     {/* Slide 2 */}
                     <div className="carousel-item" style={{
@@ -43,12 +65,17 @@ function Hero() {
                         backgroundPosition: 'center'
                     }}>
                         <div className="carousel-container">
-                            <h2 className="animate__animated animate__fadeInDown">Empowering <span>Student Branches</span></h2>
-                            <p className="animate__animated animate__fadeInUp">Through collaboration, knowledge sharing, and joint initiatives, IEEE LINK strengthens the network of student branches across Kerala. Together, we create opportunities for technical growth and professional development.</p>
-                            <a href="#about" className="btn-get-started animate__animated animate__fadeInUp scrollto">Learn More</a>
+                            <h2 className="animate__animated animate__fadeInDown animate__delay-0.5s">
+                                Empowering <span>Student Branches</span>
+                            </h2>
+                            <p className="animate__animated animate__fadeInUp animate__delay-1s">
+                                Through collaboration, knowledge sharing, and joint initiatives, IEEE LINK strengthens the network of student branches across Kerala. Together, we create opportunities for technical growth and professional development.
+                            </p>
+                            <a href="#about" className="btn-get-started animate__animated animate__fadeInUp animate__delay-1.5s scrollto">
+                                Learn More
+                            </a>
                         </div>
                     </div>
-                    
 
                     {/* Slide 3 */}
                     <div className="carousel-item" style={{
@@ -57,9 +84,15 @@ function Hero() {
                         backgroundPosition: 'center'
                     }}>
                         <div className="carousel-container">
-                            <h2 className="animate__animated animate__fadeInDown">Join IEEE LINK</h2>
-                            <p className="animate__animated animate__fadeInUp">Be part of the largest technical professional organization dedicated to advancing technology for the benefit of humanity. Connect with fellow students and professionals across Kerala.</p>
-                            <a href="#about" className="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                            <h2 className="animate__animated animate__fadeInDown animate__delay-0.5s">
+                                Join IEEE LINK
+                            </h2>
+                            <p className="animate__animated animate__fadeInUp animate__delay-1s">
+                                Be part of the largest technical professional organization dedicated to advancing technology for the benefit of humanity. Connect with fellow students and professionals across Kerala.
+                            </p>
+                            <a href="#about" className="btn-get-started animate__animated animate__fadeInUp animate__delay-1.5s scrollto">
+                                Read More
+                            </a>
                         </div>
                     </div>
                 </div>
