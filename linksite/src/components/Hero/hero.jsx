@@ -34,6 +34,7 @@ function Hero() {
                             <a href="#about" className="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
                         </div>
                     </div>
+                    
 
                     {/* Slide 2 */}
                     <div className="carousel-item" style={{
@@ -42,11 +43,12 @@ function Hero() {
                         backgroundPosition: 'center'
                     }}>
                         <div className="carousel-container">
-                            <h2 className="animate__animated animate__fadeInDown">Our Mission</h2>
-                            <p className="animate__animated animate__fadeInUp">To foster technological innovation and excellence for the benefit of humanity through collaboration and knowledge sharing among IEEE Student Branches in Kerala.</p>
-                            <a href="#about" className="btn-get-started animate__animated animate__fadeInUp scrollto" style={{display: 'block', margin: '0 auto', width: 'fit-content'}}>Read More</a>
+                            <h2 className="animate__animated animate__fadeInDown">Empowering <span>Student Branches</span></h2>
+                            <p className="animate__animated animate__fadeInUp">Through collaboration, knowledge sharing, and joint initiatives, IEEE LINK strengthens the network of student branches across Kerala. Together, we create opportunities for technical growth and professional development.</p>
+                            <a href="#about" className="btn-get-started animate__animated animate__fadeInUp scrollto">Learn More</a>
                         </div>
                     </div>
+                    
 
                     {/* Slide 3 */}
                     <div className="carousel-item" style={{

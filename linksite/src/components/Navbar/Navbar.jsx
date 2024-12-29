@@ -1,12 +1,32 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Navbar.css';
-import About from '../about';
-import Contact from '../contact';
-import OfficeBearers from '../officebearers';
-import Resources from '../resources';
-import IEEELinked from '../ieeelinked';
 
 function Navbar() {
+    const [activeLink, setActiveLink] = useState('hero');
+
+    useEffect(() => {
+        const updateNavbarHeight = () => {
+            const navbar = document.getElementById('header');
+            if (navbar) {
+                const height = navbar.offsetHeight;
+                document.documentElement.style.setProperty('--navbar-height', `${height}px`);
+            }
+        };
+
+        // Update on mount
+        updateNavbarHeight();
+
+        // Update on resize
+        window.addEventListener('resize', updateNavbarHeight);
+
+        // Cleanup
+        return () => window.removeEventListener('resize', updateNavbarHeight);
+    }, []);
+
+    const handleLinkClick = (linkId) => {
+        setActiveLink(linkId);
+    };
+
     return (
         <div>
             <header id="header" className="header d-flex align-items-center fixed-top">
@@ -17,12 +37,60 @@ function Navbar() {
 
                     <nav id="navmenu" className="navmenu">
                         <ul>
-                            <li><a href="#hero" className="active">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#office-bearers">Office Bearers</a></li>
-                            <li><a href="#ieee-linked">IEEE Linked</a></li>
-                            <li><a href="#resources">Resources</a></li>
-                            <li><a href="#contact">Contact</a></li>
+                            <li>
+                                <a 
+                                    href="#hero" 
+                                    className={activeLink === 'hero' ? 'active' : ''}
+                                    onClick={() => handleLinkClick('hero')}
+                                >
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a 
+                                    href="#about" 
+                                    className={activeLink === 'about' ? 'active' : ''}
+                                    onClick={() => handleLinkClick('about')}
+                                >
+                                    About
+                                </a>
+                            </li>
+                            <li>
+                                <a 
+                                    href="#office-bearers" 
+                                    className={activeLink === 'office-bearers' ? 'active' : ''}
+                                    onClick={() => handleLinkClick('office-bearers')}
+                                >
+                                    Office Bearers
+                                </a>
+                            </li>
+                            <li>
+                                <a 
+                                    href="#ieee-linked" 
+                                    className={activeLink === 'ieee-linked' ? 'active' : ''}
+                                    onClick={() => handleLinkClick('ieee-linked')}
+                                >
+                                    IEEE Linked
+                                </a>
+                            </li>
+                            <li>
+                                <a 
+                                    href="#resources" 
+                                    className={activeLink === 'resources' ? 'active' : ''}
+                                    onClick={() => handleLinkClick('resources')}
+                                >
+                                    Resources
+                                </a>
+                            </li>
+                            <li>
+                                <a 
+                                    href="#contact" 
+                                    className={activeLink === 'contact' ? 'active' : ''}
+                                    onClick={() => handleLinkClick('contact')}
+                                >
+                                    Contact
+                                </a>
+                            </li>
                             <li className="social-icons">
                                 <a href="#instagram"><i className="fab fa-instagram"></i></a>
                                 <a href="#linkedin"><i className="fab fa-linkedin"></i></a>

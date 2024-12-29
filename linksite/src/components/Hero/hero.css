@@ -8,6 +8,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: var(--navbar-height, 59px);
+}
+
+:root {
+  --navbar-height: 58px;
 }
 
 .hero .carousel-container {
@@ -18,7 +23,7 @@
   text-align: center;
   position: relative;
   min-height: 75vh;
-  padding-top: 60px;
+  padding-top: 90px;
 }
 
 .hero h2 {
@@ -64,7 +69,7 @@
   border-radius: 50px;
   transition: 0.5s;
   line-height: 1;
-  margin: 10px;
+  margin: 0 auto;
   color: #fff;
   animation-delay: 0.8s;
   border: 2px solid #ef6603;
@@ -129,6 +134,10 @@
 }
 
 @media (max-width: 768px) {
+  :root {
+    --navbar-height: 70px;
+  }
+  
   .hero h2 {
     font-size: 28px;
   }
@@ -141,4 +150,12 @@
   .hero .carousel-container {
     min-height: 90vh;
   }
+} 
+
+.carousel-item {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 } 

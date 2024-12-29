@@ -35,7 +35,8 @@
 
 .navmenu li {
   position: relative;
-  padding: 10px 20px;
+  padding: 5px 5px;
+  margin-left: 2px;
 }
 
 .navmenu a,
@@ -44,17 +45,20 @@
   align-items: center;
   justify-content: space-between;
   font-family: "Montserrat", sans-serif;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 400;
   color: rgba(255, 255, 255, 0.7);
   white-space: nowrap;
   transition: 0.3s;
   text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 50px;
 }
 
-.navmenu a:hover,
+.navmenu li:hover > a,
 .navmenu .active,
 .navmenu .active:focus {
+  background-color: #ef6603;
   color: #fff;
 }
 
@@ -62,15 +66,30 @@
   margin-left: 20px;
 }
 
-.navmenu .social-icons a {
+.navmenu .social-icons a,
+.navmenu .social-icons a:focus {
   color: rgba(255, 255, 255, 0.7);
   font-size: 18px;
   padding: 0 8px;
   transition: 0.3s;
+  background: none;
+  border-radius: 0;
 }
 
 .navmenu .social-icons a:hover {
-  color: #fff;
+  color: #ef6603;
+  background: none;
+  padding: 0 8px;
+}
+
+/* Override any general hover styles for social icons */
+.navmenu li.social-icons:hover > a {
+  background: none;
+  color: #ef6603;
+}
+
+.navmenu li.social-icons > a.active {
+  background: none;
 }
 
 .mobile-nav-toggle {
