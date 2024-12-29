@@ -9,6 +9,7 @@ import Features from './components/Features/features';
 import Quote from './components/Quote/quote';
 import Societies from './components/Societies/societies';
 import Newsletter from './components/Newsletter/newsletter';
+import Footer from './components/Footer/footer';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -31,6 +32,7 @@ function App() {
           <Quote />
           <Societies />
           <Newsletter />
+          <Footer />
         </>
       )}
     </div>
