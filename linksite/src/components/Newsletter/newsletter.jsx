@@ -1,6 +1,6 @@
 import React from 'react';
 import './newsletter.css';
-import linkedMagazine from '../../assets/images/newsletter/linked-magazine.jpg';
+import linkedMagazine from '../../assets/documents/IEEE-Linked-image.jpg';
 import linkedPdf from '../../assets/documents/IEEE_LINKED.pdf';
 
 function Newsletter() {
@@ -13,7 +13,7 @@ function Newsletter() {
                 </div>
 
                 <div className="row justify-content-center">
-                    <div className="col-lg-8" data-aos="fade-up">
+                    <div className="col-lg-6" data-aos="fade-up">
                         <div className="magazine-container">
                             <a href={linkedPdf} target="_blank" rel="noopener noreferrer" className="magazine-link">
                                 <div className="magazine-preview">
