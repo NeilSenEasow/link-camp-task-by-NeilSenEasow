@@ -1,0 +1,53 @@
+.quote {
+    padding: 120px 0;
+    background: url('../../assets/images/quote/replace.png') center center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    color: #fff;
+}
+
+.quote-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(42, 44, 57, 0.9), rgba(42, 44, 57, 0.9));
+}
+
+.quote-content {
+    position: relative;
+    z-index: 2;
+}
+
+.quote h2 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 0;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+}
+
+@media (max-width: 768px) {
+    .quote {
+        padding: 80px 0;
+    }
+
+    .quote h2 {
+        font-size: 24px;
+    }
+}
+
+/* Animation for the quote */
+[data-aos="fade-up"] .quote-content {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+[data-aos="fade-up"].aos-animate .quote-content {
+    opacity: 1;
+    transform: translateY(0);
+} 

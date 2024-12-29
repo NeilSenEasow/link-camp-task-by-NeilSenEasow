@@ -6,6 +6,7 @@ import Stats from './components/Stats/stats';
 import Loading from './components/loading';
 import React, { useState, useEffect } from 'react';
 import Features from './components/Features/features';
+import Quote from './components/Quote/quote';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -25,6 +26,7 @@ function App() {
           <About />
           <Stats />
           <Features />
+          <Quote />
         </>
       )}
     </div>
