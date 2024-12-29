@@ -1,0 +1,53 @@
+.stats {
+    padding: 40px 0;
+    background: #f6f7f8;
+}
+
+.stat-box {
+    text-align: center;
+    padding: 30px 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+}
+
+.stats-icon {
+    font-size: 40px;
+    color: #ef6603;
+    margin-bottom: 15px;
+}
+
+.stats-number {
+    font-size: 36px;
+    font-weight: 700;
+    color: #2a2c39;
+    margin-bottom: 10px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.stats-text {
+    font-size: 16px;
+    color: #848484;
+    margin-bottom: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+@media (max-width: 768px) {
+    .stat-box {
+        margin-bottom: 20px;
+    }
+
+    .stats-number {
+        font-size: 28px;
+    }
+
+    .stats-text {
+        font-size: 14px;
+    }
+} 
