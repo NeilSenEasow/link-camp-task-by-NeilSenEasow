@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import './hero.css';
 
-import slide1 from '../../assets/images/hero/slide1.jpg';
-import slide2 from '../../assets/images/hero/slide2.jpg';
-import slide3 from '../../assets/images/hero/slide3.jpg';
+import slide1 from '../../assets/images/hero/welcometolink.jpeg';
+import slide2 from '../../assets/images/hero/ieeepeople.jpeg';
+import slide3 from '../../assets/images/hero/ieeepeople2.jpeg';
 
 function Hero() {
     useEffect(() => {
