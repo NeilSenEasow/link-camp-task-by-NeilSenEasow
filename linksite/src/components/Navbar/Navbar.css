@@ -79,17 +79,18 @@
 .navmenu .social-icons a:hover {
   color: #ef6603;
   background: none;
-  padding: 0 8px;
 }
 
-/* Override any general hover styles for social icons */
+/* Override general navmenu hover styles for social icons */
 .navmenu li.social-icons:hover > a {
   background: none;
-  color: #ef6603;
+  color: rgba(255, 255, 255, 0.7);
 }
 
+/* Ensure active state doesn't apply to social icons */
 .navmenu li.social-icons > a.active {
   background: none;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .mobile-nav-toggle {
